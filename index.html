@@ -11,7 +11,7 @@
 <body>
     <h1>To-Do List</h1>
     <section class="container-input">
-        <form action="">
+        <form id="add-tarefa-form">
             <div class="campo campo-tarefa">
                 <label for="tarefa">Digite uma tarefa para ser adicionada:</label>
                 <input type="text" name="tarefa" id="tarefa" placeholder="ex: Levar o cão para passear...">
@@ -39,7 +39,7 @@
                     <th>Ação</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="tarefas">
                 <tr>
                     <td>Estudar Geografia</td>
                     <td>Estudo</td>
@@ -51,6 +51,7 @@
             </tbody>
         </table>
     </section>
+    <script src="js/addTarefa.js"></script>
 </body>
 
 </html>
