@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
 </head>
+
 <body>
     <h1>To-Do List</h1>
     <section class="container-input">
         <form action="">
-            <label for="add-tarefa">Digite uma tarefa para ser adicionada:</label>
-            <input type="text" name="add-tarefa" id="add-tarefa" placeholder="ex: Levar o cão para passear...">
-
+            <div class="campo campo-tarefa">
+                <label for="tarefa">Digite uma tarefa para ser adicionada:</label>
+                <input type="text" name="tarefa" id="tarefa" placeholder="ex: Levar o cão para passear...">
+            </div>
+            <div class="campo campo-categoria">
+                <label for="categorias">Qual a categoria de sua tarefa?</label>
+                <input type="text" name="categorias" id="categorias" list="categorias-list">
+                <datalist id="categorias-list">
+                    <option value="Sem Categoria">Sem Categoria</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Trabalho">Trabalho</option>
+                </datalist>
+            </div>
+            <div class="campo campo-submit">
+                <button id="add-tarefa">Adicionar</button>
+            </div>
         </form>
     </section>
     <section class="container-tarefas">
         <table>
-            <thead></thead>
-            <tbody></tbody>
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Categoria</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estudar Geografia</td>
+                    <td>Estudo</td>
+                    <td>
+                        <button>Concluir</button>
+                        <button>Remover</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </section>
 </body>
+
 </html>
