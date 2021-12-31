@@ -21,14 +21,6 @@
                 </tr>
             </thead>
             <tbody class="tarefas">
-                <tr class="tarefa">
-                    <td class="tarefa-nome">Estudar Geografia</td>
-                    <td class="tarefa-categoria">Estudo</td>
-                    <td class="tarefa-action">
-                        <button>Concluir</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
             </tbody>
             <tfoot class="add-tarefa-foot">
                 <tr class="add-tarefa-tr">
@@ -36,7 +28,11 @@
                         <button>Adicionar</button>
                     </td>
                     <td class="add-tarefa-nome" hidden contenteditable="true"></td>
-                    <td class="add-tarefa-categoria" hidden contenteditable="true"></td>
+                    <td class="add-tarefa-categoria" hidden>
+                        <input type="text" list="categorias-opt">
+                        <datalist id="categorias-opt">
+                        </datalist>
+                    </td>
                     <td class="add-tarefa-action" hidden>
                         <button class="add-tarefa">Concluir</button>
                         <button class="cancel-add">Cancel</button>
@@ -45,6 +41,8 @@
             </tfoot>
         </table>
     </section>
+    <script src="js/index.js"></script>
+    <script src="js/tableListener.js"></script>
     <script src="js/addToTable.js"></script>
     <script src="js/tfootListener.js"></script>
 </body>

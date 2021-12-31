@@ -15,13 +15,21 @@ function addToTable(tarefa) {
     let tarefaAction = document.createElement('td');
     tarefaAction.classList.add('tarefa-action')
 
-    let concluirButton = document.createElement('button');
-    concluirButton.textContent = 'Concluir';
+    let checkButton = document.createElement('button');
+    checkButton.classList.add('tarefa-check')
+    checkButton.textContent = 'Check';
+
+    let uncheckButton = document.createElement('button');
+    uncheckButton.classList.add('tarefa-uncheck');
+    uncheckButton.textContent = 'Uncheck';
+    uncheckButton.hidden = true;
 
     let deleteButton = document.createElement('button');
+    deleteButton.classList.add('tarefa-delete');
     deleteButton.textContent = 'Delete';
 
-    tarefaAction.appendChild(concluirButton);
+    tarefaAction.appendChild(checkButton);
+    tarefaAction.appendChild(uncheckButton);
     tarefaAction.appendChild(deleteButton);
 
     tr.appendChild(tarefaNome);
