@@ -21,23 +21,32 @@
                 </tr>
             </thead>
             <tbody class="tarefas">
-                <tr>
-                    <td>Estudar Geografia</td>
-                    <td>Estudo</td>
-                    <td>
+                <tr class="tarefa">
+                    <td class="tarefa-nome">Estudar Geografia</td>
+                    <td class="tarefa-categoria">Estudo</td>
+                    <td class="tarefa-action">
                         <button>Concluir</button>
-                        <button>Remover</button>
+                        <button>Delete</button>
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                   <td class="add-tarefa" colspan="3"><button>Adicionar</button></td>
+            <tfoot class="add-tarefa-foot">
+                <tr class="add-tarefa-tr">
+                    <td class="add-tarefa-button" colspan="3">
+                        <button>Adicionar</button>
+                    </td>
+                    <td class="add-tarefa-nome" hidden contenteditable="true"></td>
+                    <td class="add-tarefa-categoria" hidden contenteditable="true"></td>
+                    <td class="add-tarefa-action" hidden>
+                        <button class="add-tarefa">Concluir</button>
+                        <button class="cancel-add">Cancel</button>
+                    </td>
                 </tr>
             </tfoot>
         </table>
     </section>
-    <script src="js/addTarefa.js"></script>
+    <script src="js/addToTable.js"></script>
+    <script src="js/tfootListener.js"></script>
 </body>
 
 </html>
