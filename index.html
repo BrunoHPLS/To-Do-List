@@ -10,27 +10,8 @@
 
 <body>
     <h1>To-Do List</h1>
-    <section class="container-input">
-        <form id="add-tarefa-form">
-            <div class="campo campo-tarefa">
-                <label for="tarefa">Digite uma tarefa para ser adicionada:</label>
-                <input type="text" name="tarefa" id="tarefa" placeholder="ex: Levar o cão para passear...">
-            </div>
-            <div class="campo campo-categoria">
-                <label for="categorias">Qual a categoria de sua tarefa?</label>
-                <input type="text" name="categorias" id="categorias" list="categorias-list">
-                <datalist id="categorias-list">
-                    <option value="Sem Categoria">Sem Categoria</option>
-                    <option value="Estudos">Estudos</option>
-                    <option value="Trabalho">Trabalho</option>
-                </datalist>
-            </div>
-            <div class="campo campo-submit">
-                <button id="add-tarefa">Adicionar</button>
-            </div>
-        </form>
-    </section>
     <section class="container-tarefas">
+        <h2 class="categoria">Geral</h2>
         <table>
             <thead>
                 <tr>
@@ -49,6 +30,11 @@
                     </td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                   <td class="add-tarefa" colspan="3"><button>Adicionar</button></td>
+                </tr>
+            </tfoot>
         </table>
     </section>
     <script src="js/addTarefa.js"></script>
