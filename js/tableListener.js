@@ -1,6 +1,4 @@
-let tbody = document.querySelector('.tarefas');
-
-tbody.addEventListener('click',(event)=>{
+table.addEventListener('click',(event)=>{
     let target = event.target;
     let parentTr = target.parentNode.parentNode;
     let value = event.target.textContent;

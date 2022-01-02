@@ -1,4 +1,3 @@
-let table = document.querySelector('.tarefas');
 
 function addToTable(tarefa) {
     let tr = document.createElement('tr');
@@ -37,4 +36,6 @@ function addToTable(tarefa) {
     tr.appendChild(tarefaAction);
 
     table.appendChild(tr);
+    
+    filtrarTabela();
 }

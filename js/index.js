@@ -1,18 +1,27 @@
 let dataList = document.querySelector('#categorias-opt')
+let categoFilter = document.querySelector('#categoFilter');
 
-let categorias = ['Estudo', 'Trabalho'];
+function getTable() {
+    return document.querySelector('.tarefas');
+}
 
-categorias.forEach(cat => {
-    let opt = document.createElement('option');
-    opt.value = cat;
-    opt.textContent = cat;
-    dataList.appendChild(opt);
-});
+function getTarefas() {
+    return document.querySelectorAll('.tarefa');
+}
+let table = getTable();
+
+let optGeral = document.createElement('option');
+optGeral.value = 'Geral';
+optGeral.textContent = 'Geral';
+categoFilter.appendChild(optGeral);
+
+let categorias = [];
 
 function addCategoria(categoria) {
     categorias.push(categoria);
     let opt = document.createElement('option');
     opt.value = categoria;
     opt.textContent = categoria;
-    dataList.appendChild(opt);
+    dataList.appendChild(opt.cloneNode(false));
+    categoFilter.appendChild(opt);
 }
