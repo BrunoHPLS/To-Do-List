@@ -26,5 +26,3 @@ function addCategoria(categoria) {
     dataList.appendChild(opt.cloneNode(false));
     categoFilter.appendChild(opt);
 }
-
-addCategoria('Rotina');
