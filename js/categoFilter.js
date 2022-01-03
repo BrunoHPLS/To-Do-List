@@ -11,7 +11,7 @@ function filtrarTabela() {
     let tarefas = getTarefas();
     if(categoria == 'Geral'){
         tarefas.forEach(element => {
-            element.hidden = false;
+            element.classList.remove('invisivel');
         });
     }else{
     tarefas.forEach(element => {
@@ -19,10 +19,10 @@ function filtrarTabela() {
             nome: element.children[0].textContent,
             categoria: element.children[1].textContent
         };
-        if(tarefa.categoria == categoria){
-            element.hidden = false;
+        if(tarefa.categoria==categoria){
+            element.classList.remove('invisivel');
         }else{
-            element.hidden = true;
+            element.classList.add('invisivel');
         }
     });
     }

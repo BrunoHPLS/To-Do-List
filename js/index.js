@@ -8,7 +8,8 @@ function getTable() {
 function getTarefas() {
     return document.querySelectorAll('.tarefa');
 }
-let table = getTable();
+
+let ul = getTable();
 
 let optGeral = document.createElement('option');
 optGeral.value = 'Geral';
@@ -25,3 +26,5 @@ function addCategoria(categoria) {
     dataList.appendChild(opt.cloneNode(false));
     categoFilter.appendChild(opt);
 }
+
+addCategoria('Rotina');

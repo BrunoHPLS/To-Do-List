@@ -21,39 +21,31 @@
             </select>
         </div>
         <div class="tarefas-container">
-            <table class="tarefas-table">
-                <thead class="tarefas-head">
-                    <tr>
-                        <th>Tarefa</th>
-                        <th>Categoria</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody class="tarefas">
-                </tbody>
-                <tfoot class="add-tarefa-foot">
-                    <tr class="add-tarefa-tr">
-                        <td class="add-tarefa-button" colspan="3">
-                            <button>Adicionar</button>
-                        </td>
-                        <td class="add-tarefa-nome" hidden="true"><input type="text" id="tarefa-nome" placeholder="Tarefa"></td>
-                        <td class="add-tarefa-categoria" hidden>
-                            <input type="text" list="categorias-opt" placeholder="Categoria">
-                            <datalist id="categorias-opt"></datalist>
-                        </td>
-                        <td class="add-tarefa-action" hidden>
-                            <button class="add-tarefa">Concluir</button><button class="cancel-add">Cancel</button>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            <ul class="tarefas">
+                <li class="tarefa">
+                    <p class="tarefa-nome">Levar o cão para passear</p>
+                    <p class="tarefa-categoria">Rotina</p>
+                    <div class="tarefa-action">
+                        <button class="button-check">Check</button><button class="button-uncheck" hidden>Uncheck</button><button class="button-delete">Delete</button>
+                    </div>
+                </li>
+            </ul>
         </div>
+        <div class="add-tarefa-container">
+            <button class="add-tarefa-button">Adicionar</button>
+            <input type="text" id="tarefa-input" placeholder="Tarefa" hidden>
+            <input type="text" name="categoria" id="categoria-input" list="categorias-opt" placeholder="Categoria" hidden>
+            <datalist id="categorias-opt">
+            </datalist>
+            <button class="add-tarefa" hidden>Concluir</button>
+            <button class="cancel-add" hidden>Cancel</button>
+        </div> 
     </section>
     <script src="js/index.js"></script>
     <script src="js/categoFilter.js"></script>
-    <script src="js/tableListener.js"></script>
-    <script src="js/addToTable.js"></script>
-    <script src="js/tfootListener.js"></script>
+    <script src="js/listListener.js"></script>
+    <script src="js/addToList.js"></script>
+    <script src="js/addListener.js"></script>
 </body>
 
 </html>
