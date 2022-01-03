@@ -20,7 +20,7 @@ tfoot.addEventListener('click',(event) =>{
 
     if(value == 'Concluir'){
         let tarefa = {
-            nome: tdTarefa.textContent,
+            nome: tdTarefa.children[0].value,
             categoria: tdCategoria.children[0].value
         }
         addToTable(tarefa);
@@ -32,7 +32,7 @@ tfoot.addEventListener('click',(event) =>{
 });
 
 function sessionAdd(resp) {
-    tdTarefa.textContent = '';
+    tdTarefa.children[0].value = '';
     tdCategoria.children[0].value = '';
 
     tdAdd.hidden = resp;

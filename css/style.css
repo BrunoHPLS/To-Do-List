@@ -1,0 +1,89 @@
+body{
+    background-color: #DEE0E2;
+}
+
+body, button, input, option{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container{
+    position: relative;
+    background-color: #35393C;
+    margin: 50px auto;
+    width: 500px; 
+    height: 500px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.categoField{
+    background-color: #8A4BDE;
+    color: #FEC753;
+    border-radius: 7px;
+    padding: 0px 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.categoria{
+    font-size: 3.5em;
+    width: 70%;
+    text-align: center;
+}
+
+#categoFilter{
+    font-size: 1.5em;
+    width: 30%;
+}
+
+.tarefas-container{
+    padding: 5px 0px;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 439px;
+}
+
+.tarefas-table{
+    margin: 10px auto;
+    width: 90%;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tarefas-head{
+    font-size: 1.5em;
+}
+
+.tarefa{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.Checked .tarefa-nome{
+    text-decoration: line-through;
+}
+
+.add-tarefa-tr td, .add-tarefa-tr input, .add-tarefa-tr button{
+    font-size: 0.95em;
+}
+
+.add-tarefa-button{
+    text-align: center;
+}
+
+.add-tarefa-button button{
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 10px;
+    background-color: #8A4BDE;
+    width: 60%;
+    height: 2em;
+}
+

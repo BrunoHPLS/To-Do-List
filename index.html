@@ -5,42 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
     <title>To-Do List</title>
 </head>
 
 <body>
-    <h1>To-Do List</h1>
-    <section class="container-tarefas">
-        <h2 class="categoria">Geral</h2>
-        <select name="categoFilter" id="categoFilter">
-        </select>
-        <table>
-            <thead>
-                <tr>
-                    <th>Tarefa</th>
-                    <th>Categoria</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody class="tarefas">
-            </tbody>
-            <tfoot class="add-tarefa-foot">
-                <tr class="add-tarefa-tr">
-                    <td class="add-tarefa-button" colspan="3" >
-                        <button>Adicionar</button>
-                    </td>
-                    <td class="add-tarefa-nome" hidden contenteditable="true"></td>
-                    <td class="add-tarefa-categoria" hidden>
-                        <input type="text" list="categorias-opt">
-                        <datalist id="categorias-opt"></datalist>
-                    </td>
-                    <td class="add-tarefa-action" hidden>
-                        <button class="add-tarefa">Concluir</button>
-                        <button class="cancel-add">Cancel</button>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
+    <section class="container">
+        <div class="categoField">
+            <h2 class="categoria">Geral</h2>
+            <select name="categoFilter" id="categoFilter">
+            </select>
+        </div>
+        <div class="tarefas-container">
+            <table class="tarefas-table">
+                <thead class="tarefas-head">
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Categoria</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody class="tarefas">
+                </tbody>
+                <tfoot class="add-tarefa-foot">
+                    <tr class="add-tarefa-tr">
+                        <td class="add-tarefa-button" colspan="3">
+                            <button>Adicionar</button>
+                        </td>
+                        <td class="add-tarefa-nome" hidden="true"><input type="text" id="tarefa-nome" placeholder="Tarefa"></td>
+                        <td class="add-tarefa-categoria" hidden>
+                            <input type="text" list="categorias-opt" placeholder="Categoria">
+                            <datalist id="categorias-opt"></datalist>
+                        </td>
+                        <td class="add-tarefa-action" hidden>
+                            <button class="add-tarefa">Concluir</button><button class="cancel-add">Cancel</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </section>
     <script src="js/index.js"></script>
     <script src="js/categoFilter.js"></script>

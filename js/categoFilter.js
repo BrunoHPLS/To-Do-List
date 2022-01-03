@@ -2,6 +2,8 @@ let categoria = 'Geral';
 
 categoFilter.addEventListener('change',(event) => {
     categoria = event.target.value;
+    let categoriaTitle = document.querySelector('.categoria');
+    categoriaTitle.textContent = categoria;
     filtrarTabela();
 });
 
